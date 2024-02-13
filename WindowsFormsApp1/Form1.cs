@@ -49,5 +49,23 @@ namespace WindowsFormsApp1
                 DisplayQuestion();
             }
         }
+        private void chkBtn_Click(object sender, EventArgs e)
+        {
+            string userAnswer = Answer.Text.ToLower(); // ユーザーの回答を取得し、小文字に変換
+            string correctAnswer = answers[questionNumber].ToLower(); // 正解を取得し、小文字に変換
+
+            if (userAnswer == correctAnswer)
+            {
+                MessageBox.Show("正解です！", "結果", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("不正解です！", "結果", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            Answer.Clear(); // 回答フィールドをクリア
+            Answer.Focus(); // 回答フィールドにフォーカスを戻す
+        }
     }
+
 }

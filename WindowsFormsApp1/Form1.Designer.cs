@@ -34,6 +34,7 @@
             this.Question = new System.Windows.Forms.Label();
             this.Answer = new System.Windows.Forms.TextBox();
             this.Answer_label = new System.Windows.Forms.Label();
+            this.chkBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cntNum
@@ -98,11 +99,23 @@
             this.Answer_label.TabIndex = 6;
             this.Answer_label.Text = "答え";
             // 
+            // chkBtn
+            // 
+            this.chkBtn.Font = new System.Drawing.Font("MS UI Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.chkBtn.Location = new System.Drawing.Point(374, 85);
+            this.chkBtn.Name = "chkBtn";
+            this.chkBtn.Size = new System.Drawing.Size(78, 28);
+            this.chkBtn.TabIndex = 7;
+            this.chkBtn.Text = "答え合わせ！";
+            this.chkBtn.UseVisualStyleBackColor = true;
+            this.chkBtn.Click += new System.EventHandler(this.chkBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkBtn);
             this.Controls.Add(this.Answer_label);
             this.Controls.Add(this.Answer);
             this.Controls.Add(this.Question);
@@ -125,6 +138,7 @@
         private System.Windows.Forms.Label Question;
         private System.Windows.Forms.TextBox Answer;
         private System.Windows.Forms.Label Answer_label;
+        private System.Windows.Forms.Button chkBtn;
     }
 }
 
